@@ -1,8 +1,8 @@
-# ![Moonbeam](box-img-sm.png)
+# ![Plasm](box-img-sm.png)
 
-# Moonbeam Truffle Box
+# Plasm Truffle Box
 
-A beta version of the Moonbeam Truffle Box. 
+A beta version of the Plasm Truffle Box. 
 
 
 ## Getting started
@@ -10,7 +10,7 @@ A beta version of the Moonbeam Truffle Box.
 To get started, clone this repository
 
 ```
-git clone https://github.com/albertov19/moonbeam_box
+git clone https://github.com/staketechnologies/plasm_box
 ```
 
 Afterwards, install all the dependencies:
@@ -23,68 +23,67 @@ The dependencies installed are the following:
 -  EthereumJS wallet: a lightweight wallet implementation.
 -  Minimist: TODO
 -  Web3 Provider Engine: tool for composing custom Web3 providers.
--  Truffle: this is not needed if you have installed it globally.
--  Moonbeam Truffle Plugin: tool to easily create your own standalone Moonbeam node for development (uses Docker).
+-  Plasm Truffle Plugin: tool to easily create your own standalone Plasm dev node for development (uses Docker).
 
 ## Networks
 
-Moonbeam Truffle Box is pre-configured with two networks: standalone and TestNet. To deploy in the standalone network please check the Moonbeam Truffle Pluggin section to install and start your own local node.
+Plasm Truffle Box is pre-configured with two networks: standalone and TestNet. To deploy in the standalone network please check the Plasm Truffle Pluggin section to install and start your own local node.
 
 ```
-node_modules/.bin/truffle migrate --network development
+truffle migrate --network development
 ```
 
 ```
-node_modules/.bin/truffle migrate --network testnet
+truffle migrate --network testnet
 ```
 
-_Note: if you have Truffle installed globally, you can replace `node_modules/.bin/truffle` for `truffle`._
+_Note: if you have Truffle installed globally, you can replace `truffle` for `truffle`._
 
-## Moonbeam Truffle Plugin
+## Plasm Truffle Plugin
 
-The Plugin is used to get you started with a local standalone Moonbeam node quickly, the following commands are available:
+The Plugin is used to get you started with a local standalone Plasm dev node quickly, the following commands are available:
 
 ### Install
-In this context, installing means downloading the Docker image of the Moonbeam standalone node (requires Docker to be installed).
+In this context, installing means downloading the Docker image of the Plasm standalone dev node (requires Docker to be installed).
 
 ```
-node_modules/.bin/truffle run moonbeam install
+truffle run plasm install
 ```
 
 ### Start
-Start the standalone Moonbeam node.
+Start the standalone Plasm dev node.
 
 ```
-node_modules/.bin/truffle run moonbeam start
+truffle run plasm start
 ```
 
 ### Stop
-Stop the standalone Moonbeam node. This will remove the container, thus purging the chain.
+Stop the standalone Plasm dev node. This will remove the container, thus purging the chain.
 
 ```
-node_modules/.bin/truffle run moonbeam stop
+truffle run plasm stop
 ```
 
 ### Pause
-Pause the standalone Moonbeam node.
+Pause the standalone Plasm dev node.
 
 ```
-node_modules/.bin/truffle run moonbeam pause
+truffle run plasm pause
 ```
 
 ### Unpause
-Unpause the standalone Moonbeam node.
+Unpause the standalone Plasm dev node.
 
 ```
-node_modules/.bin/truffle run moonbeam unpause
+truffle run plasm unpause
 ```
 
 ### Status
-Shows the status of the standalone Moonbeam node.
+Shows the status of the standalone Plasm dev node.
 
 ```
-node_modules/.bin/truffle run moonbeam status
+truffle run plasm status
 ```
 
 ## Contact Us
-We welcome any feedback, so feel free to reach out through our official [Discord Channel](https://discord.gg/PfpUATX).
+We welcome any feedback, so feel free to reach out through our official [Discord Channel](https://discord.gg/9Ajz2aCmYg).
