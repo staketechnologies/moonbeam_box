@@ -3,7 +3,7 @@ const { exec } = require("child_process");
 const start = async () => {
   // Start Node
   exec(
-    "docker run --rm -d -p 9933:9933 -p 9944:9944 staketechnologies/plasm-node  plasm-node --rpc-external --rpc-cors all --dev",
+    "docker run --rm -it -d --name plasm-node -p 9933:9933 -p 9944:9944 -p 9615:9615 staketechnologies/plasm-node --rpc-external --rpc-cors all --dev",
     (error, stdout, stderr) => {
       if (error) {
         if (error.message.includes("permission denied")) {
@@ -20,7 +20,7 @@ const start = async () => {
         return;
       }
       console.log(
-        `Node has started - RPC endpoint http://127.0.0.1:9933 - Container ID ${stdout.substr(
+        `Node has started - Endpoints: HTTP http://127.0.0.1:9933  WS ws://127.0.0.1:9944 - Container ID ${stdout.substr(
           0,
           12
         )} \n`
